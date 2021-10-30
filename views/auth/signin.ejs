@@ -1,0 +1,38 @@
+<% include ../partials/header.ejs %>
+
+<!--Author Name: Gurwinder Singh
+Student number: 301176745
+Date: 23 October 2021
+File name: signin.ejs-->
+
+<div class="main_div" style="background-image:url(/Assets/images/img1.png); padding-bottom: 200px;">
+    <div class="container_div">
+        <div class="container_header"> 
+            <h1>Sign-In</h1>
+
+            <div class="content" >
+                <% for(var i in messages) { %>
+                    <div class="flash" style="color: rgb(236, 135, 135);"><%= messages[i] %></div>
+                <% } %>  
+                <form action="/users/signin" method="post">
+                    <input type="text" name="username" class="form-control" placeholder="Enter your username:" />
+                    <input type="password" name="password" class="form-control" placeholder="Enter your password:"/>
+                    <button type="submit"id="Submit" value="Sign In">Sign-In</button>               
+                    <a href="/users/signup" style="font-weight: bold; font-size: medium;">                
+                        <i class="fas fa-user-plus"></i> Signup
+                    </a>
+                </form>
+                <br>
+                 <!-- Customized footer -->
+                 <div class="footer">
+                    <footer>
+                        <p>©Copyright2021 Gurwinder Singh | 301176745 | Fall 2021 | Comp229<br>
+                        <a href="https://www.instagram.com/ibm/?hl=en"><i class="fab fa-instagram"></i> </a>&nbsp; &nbsp;&nbsp; &nbsp;<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/IBM/"><i class="fab fa-facebook"></i></a></p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

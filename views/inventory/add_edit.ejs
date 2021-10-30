@@ -1,0 +1,90 @@
+<%- include ../partials/header.ejs %>
+
+<div class="main_div" style="background-image:url(/Assets/images/img9.png);">
+    <div class="container_div">
+        <div class="container_header"> 
+            <br>
+
+        <h2 style="font-family: 'papyrus'; text-align: center; color: white; text-decoration: none;">Add/Edit Business Contact List!</h2>
+        <br>
+        <h4 style="font-family: 'papyrus'; text-align: center; color: white;">Be a part of my community!</h4>
+    
+        <br>
+        <br>
+        <div class="content" >
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= name._id %>"
+                    >
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter the Name"
+                        name="name" 
+                        value="<%= name.name %>"
+                        required>
+                </div>
+                <div class="form-group">
+                    <!-- <label for="QtyTextField">Contact number</label> -->
+                    <input type="tel" class="form-control"
+                    id="QtyTextField"
+                    placeholder="Contact Number"
+                    name="contact" 
+                    value="<%= name.contact %>"
+                    required>
+                </div>
+                <!-- <div class="form-group">
+                    <input type="text" class="form-control"
+                    id="statusTextField"
+                    placeholder="Enter a Description"
+                    name="description" 
+                    value="<%= name.description %>"
+                    >
+                </div> -->
+              
+                <div class="form-group">
+                    <!-- <label for="emailTextArea">Email</label> -->
+                    <input type="email" class="form-control"
+                    id="emailTextArea"
+                    placeholder="Enter your Email ID"
+                    name="email"
+                    value="<%= name.email %>" 
+                    required>
+                    <!-- <%= name.email %>
+                    </textarea> -->
+                    
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-arrow-circle-right fa-lg"></i> 
+                    Submit
+                </button>
+
+                <button class="btn btn-danger" type="submit">
+                   <a href="/inventory/delete/<%= name._id%>"><i class="fas fa-trash"></i> Delete</a>    
+                </button>
+
+                <button class="btn btn-danger" type="submit">
+                    <a href="/inventory/list"><i class="fas fa-stop"></i> Cancel</a>
+                </button>
+
+            </form>
+            <br>
+            <br>
+             <!-- Customized footer -->
+     <div class="footer">
+        <footer>
+            <p>©Copyright2021 Gurwinder Singh | 301176745 | Fall 2021 | Comp229</p>
+            <a href="https://www.instagram.com/ibm/?hl=en"><i class="fab fa-instagram"></i> </a>&nbsp; &nbsp;&nbsp; &nbsp;<a
+                href="https://twitter.com/"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp; <a
+                href="https://www.facebook.com/IBM/"><i class="fab fa-facebook"></i></a></p></footer>
+        </div>
+
+    </div>
+    
+</div>
+</div>
+
+<% include ../partials/footer.ejs %>
